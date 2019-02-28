@@ -1,0 +1,27 @@
+<h1>Product Form</h1>
+
+<div ng-app=" ">
+
+<form (ngSubmit)="onSubmit()" #productForm="ngForm">
+  Product name: <br>
+  <input type="text" name="productName" ng-model="productName"><br>
+  <br>
+  Description: <br>
+  <textarea name="description" rows="10" cols="30">
+    Product description here.
+  </textarea><br>
+
+  Price:<br>
+  <input type="number" name="price"><br><br>
+
+  Radioactive?<br>
+  <select required>
+    <option disabled>  </option>
+    <option value="extremely">Extremely</option>
+    <option value="slightly">Slightly</option>
+    <option value="no">No</option>
+  </select>
+  <br><br>
+<button type="submit">Submit</button>
+</form>
+</div>
